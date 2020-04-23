@@ -8,11 +8,13 @@ public class Main {
         function.showFunction();
         int func_num = func_nuc();
         function.setFunc_num(func_num);
-        function.toString();
+        System.out.println(function.toString());
         double x_0 = setInitialValue("x0");
         double y_0 = setInitialValue("y_0");
         double end_of_line = setInitialValue("конец отрезка");
         double accuracy =  accuracy();
+        AdamsMethod adams = new AdamsMethod(func_num, x_0, y_0, end_of_line, accuracy);
+        adams.methodAdams();
     }
 
     private static double setInitialValue(String initial_value) {
@@ -25,6 +27,7 @@ public class Main {
     private static double accuracy() {
         double accuracy;
         mistake = false;
+        System.out.println("Введите точность:");
         do {
             mistake = false;
             accuracy = scanner.nextDouble();
@@ -41,7 +44,7 @@ public class Main {
         int func_num;
         mistake = false;
 
-        System.out.println("Введите номер функции");
+        System.out.println("Введите номер функции: ");
         do {
             mistake = false;
             func_num = scanner.nextInt();
