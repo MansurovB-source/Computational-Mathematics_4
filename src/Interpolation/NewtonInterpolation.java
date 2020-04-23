@@ -11,7 +11,7 @@ public class NewtonInterpolation {
     private Double x_client;
     private double y_for_client;
 
-    void setX_client(Double x_client) {
+    public void setX_client(Double x_client) {
         this.x_client = x_client;
     }
 
@@ -22,11 +22,11 @@ public class NewtonInterpolation {
 
     }
 
-    double[] getX_interpolation() {
+    public double[] getX_interpolation() {
         return x_interpolation;
     }
 
-    double[] getY_interpolation() {
+    public double[] getY_interpolation() {
         return y_interpolation;
     }
 
